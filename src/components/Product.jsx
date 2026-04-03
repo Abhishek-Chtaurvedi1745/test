@@ -5,7 +5,7 @@ function FeaturedProjects() {
 
   const projects = [
     {
-      name: "Aluminium Castings",
+      name: "Aluminium Castings.",
       location:
         "Advanced-grade complex die-cast components and finished parts for automotives.",
       img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
