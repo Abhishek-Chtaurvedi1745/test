@@ -1,1 +1,96 @@
-import React, { useState } from "react"; function FeaturedProjects() { const [activeIndex, setActiveIndex] = useState(0); const projects = [ { name: "Aluminium Castings", location: "Advanced-grade complex die-cast components and finished parts for automotives.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" }, { name: "Alloy Wheels", location: "Completely automated production of alloy wheels for two and four wheelers.", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" }, { name: "Auto Chains", location: "Two & three wheeler auto chains of superior quality and durability.", img: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68" }, { name: "Carbon Composite", location: "Complex carbon parts and assemblies simplified with a certified production process.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" }, { name: "Alloy Wheels", location: "Completely automated production of alloy wheels for two and four wheelers.", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" }, { name: "Auto Chains", location: "Two & three wheeler auto chains of superior quality and durability.", img: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68" } ]; return ( <section className="h-screen w-full bg-black flex flex-col items-center justify-center"> {/* Heading */} <h1 className="text-white text-4xl md:text-5xl font-bold mb-8"> Product </h1> {/* Image Gallery */} <div className="flex max-w-7xl max-w-7xl mx-auto h-[70vh] gap-4 px-6 overflow-hidden"> {projects.map((item, index) => ( <div key={index} onClick={() => setActiveIndex(index)} className={relative cursor-pointer transition-all duration-700 ease-in-out ${activeIndex === index ? "flex-[3]" : "flex-[1]"}} > {/* Image */} <img src={${item.img}?auto=format&fit=crop&w=1200&q=80} alt={item.name} className="w-full h-full object-cover transition-transform duration-700 hover:scale-110" /> {/* Gradient Overlay */} <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div> {/* Text Content */} <div className={absolute bottom-10 left-6 text-white transition-all duration-500 ${activeIndex === index ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}} > <h2 className="text-2xl md:text-3xl font-bold text-blue-400"> {item.name} </h2> <p className="text-gray-300 mt-2">{item.location}</p> <button className="mt-4 px-5 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"> Get More Information </button> </div> </div> ))} </div> </section> ); } export default FeaturedProjects;
+import React, { useState } from "react";
+
+function FeaturedProjects() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const projects = [
+    {
+      name: "Aluminium Castings",
+      location:
+        "Advanced-grade complex die-cast components and finished parts for automotives.",
+      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    },
+    {
+      name: "Alloy Wheels",
+      location:
+        "Completely automated production of alloy wheels for two and four wheelers.",
+      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    },
+    {
+      name: "Auto Chains",
+      location:
+        "Two & three wheeler auto chains of superior quality and durability.",
+      img: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68",
+    },
+    {
+      name: "Carbon Composite",
+      location:
+        "Complex carbon parts and assemblies simplified with a certified production process.",
+      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    },
+    {
+      name: "Alloy Wheels",
+      location:
+        "Completely automated production of alloy wheels for two and four wheelers.",
+      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    },
+    {
+      name: "Auto Chains",
+      location:
+        "Two & three wheeler auto chains of superior quality and durability.",
+      img: "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68",
+    },
+  ];
+
+  return (
+    <section className="h-screen w-full bg-black flex flex-col items-center justify-center">
+      {/* Heading */}
+      <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+        Product
+      </h1>
+
+      {/* Image Gallery */}
+      <div className="flex max-w-7xl max-w-7xl mx-auto h-[70vh] gap-4 px-6 overflow-hidden">
+        {projects.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`relative cursor-pointer transition-all duration-700 ease-in-out ${
+              activeIndex === index ? "flex-[3]" : "flex-[1]"
+            }`}
+          >
+            {/* Image */}
+            <img
+              src={`${item.img}?auto=format&fit=crop&w=1200&q=80`}
+              alt={item.name}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+            />
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+            {/* Text Content */}
+            <div
+              className={`absolute bottom-10 left-6 text-white transition-all duration-500 ${
+                activeIndex === index
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-blue-400">
+                {item.name}
+              </h2>
+              <p className="text-gray-300 mt-2">{item.location}</p>
+
+              <button className="mt-4 px-5 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                Get More Information
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default FeaturedProjects;
