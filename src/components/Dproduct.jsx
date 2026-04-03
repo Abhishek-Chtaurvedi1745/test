@@ -46,7 +46,7 @@ function LocationSection() {
       <p className="text-center font-semibold text-[20px] mb-7">We Are More Than Our Manufacturing</p>
 
       {/* Grid */}
-      <div className="grid grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
         {locations.map((item, index) => (
           <div
