@@ -50,7 +50,7 @@ function LocationSection() {
         {locations.map((item, index) => (
           <div
             key={index}
-            className={`relative overflow-hidden rounded-xl cursor-pointer group w-full 
+            className={`relative overflow-hidden  cursor-pointer group w-full 
             ${item.className} lg:${item.className}`}
           >
             {/* Image */}
