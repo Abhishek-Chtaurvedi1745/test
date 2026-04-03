@@ -43,21 +43,21 @@ function FeaturedProjects() {
   ];
 
   return (
-    <section className="h-screen w-full bg-black flex flex-col items-center justify-center">
+    <section className="h-auto md:h-screen w-full bg-black flex flex-col items-center justify-center py-10">
       {/* Heading */}
       <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
         Product
       </h1>
 
       {/* Image Gallery */}
-      <div className="flex max-w-7xl max-w-7xl mx-auto h-[70vh] gap-4 px-6 overflow-hidden">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto md:h-[70vh] gap-4 px-6 overflow-hidden w-full">
         {projects.map((item, index) => (
           <div
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`relative cursor-pointer transition-all duration-700 ease-in-out ${
-              activeIndex === index ? "flex-[3]" : "flex-[1]"
-            }`}
+              activeIndex === index ? "md:flex-[3]" : "md:flex-[1]"
+            } w-full h-[300px] md:h-auto`}
           >
             {/* Image */}
             <img
